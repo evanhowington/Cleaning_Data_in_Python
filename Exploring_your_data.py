@@ -60,7 +60,7 @@ Visualizing multiple variables with boxplots
 #print(df.columns)
 # Import necessary modules
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # create the boxplot
 df.plot(kind='box', rot=90, x='Initial Cost', by='Borough')
@@ -69,3 +69,19 @@ plt.show()
 ### THIS BOXPLOT IS STILL THROWING AN ERROR:  RUNTIMEWARNING: INVALID VALUE ENCOUNTERED IN PERCENTILE INTERPOLATION=INTERPOLATION
 ### original code replaced 'x' with 'column' and 'by' was 'by', however that did NOT produce a plot
 ###  Need to figure out the plot issue with df.boxplot.......
+
+"""
+Visualizing multiple variables with scatter plots
+"""
+
+# Import necessary modules
+import pandas as pd
+#import matplotlib.pyplot as plt
+
+# Create and display the first scatter plot
+df.plot(kind='hist', x='Initial Cost', y='Total Est. Fee', rot=70)
+plt.show()
+
+# Create and display the second scatter plot
+#df_subset.plot(kind='scatter', x='initial_cost', y='total_est_fee', rot=70)
+#plt.show()
